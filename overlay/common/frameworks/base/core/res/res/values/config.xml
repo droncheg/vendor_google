@@ -35,4 +35,10 @@
         <item>users</item>
     </string-array>
 
+    <!-- Apps that are authorized to access shared accounts, overridden by product overlays -->
+    <string name="config_appsAuthorizedForSharedAccounts">;com.android.vending;com.android.settings;</string>
+
+    <!-- Flag indicating which package name can access the persistent data partition -->
+    <string name="config_persistentDataPackageName">com.google.android.gms</string>
+
 </resources>
