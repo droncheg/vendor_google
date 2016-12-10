@@ -49,4 +49,7 @@
         <item>com.google.android.gms</item>
     </string-array>
 
+    <!-- Colon separated list of package names that should be granted DND access -->
+    <string name="config_defaultDndAccessPackages">com.google.android.googlecamera</string>
+
 </resources>
