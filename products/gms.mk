@@ -115,6 +115,13 @@ PRODUCT_PACKAGES += \
     LatinImeGoogle \
     Music2
 
+# GoogleCamera doesn't support HAL1 on Nougat
+# Allow only Tone and Yoshino for now
+ifneq ($(filter aosp_f813% aosp_f833% aosp_g823% aosp_g814%, $(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    GoogleCamera
+endif
+
 ifneq ($(filter-out aosp_c6903 aosp_c6833 aosp_d5503, $(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
     TagGoogle
