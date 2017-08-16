@@ -80,6 +80,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.display-size=3840x2160
 endif
 
+# System Additions
+$(call inherit-product-if-exists, vendor/google/prebuilt/common/prebuilt.mk)
+
 # OpenGapps
 GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
