@@ -73,14 +73,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
 endif
 
-# RIL
-ifneq ($(filter aosp_c6903 aosp_d5503 aosp_c6833, $(TARGET_PRODUCT)),)
-BOARD_RIL_CLASS := ../../../$(VENDOR_SONYAOSP_PATH)/ril-rhine/
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SonyRIL
-endif
-
 # OpenGapps
 GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
