@@ -39,12 +39,6 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 PRODUCT_PACKAGE_OVERLAYS += \
     $(VENDOR_SONYAOSP_PATH)/overlay/common
 
-# Night Mode
-ifneq ($(filter-out aosp_f813% aosp_f833% aosp_g823% aosp_g814%, $(TARGET_PRODUCT)),)
-PRODUCT_PACKAGE_OVERLAYS += \
-    $(VENDOR_SONYAOSP_PATH)/overlay-night/common
-endif
-
 # Audio (Notifications/Alarms)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Tethys.ogg \
