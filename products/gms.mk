@@ -100,4 +100,4 @@ PRODUCT_PACKAGES += \
     TagGoogle
 endif
 
-$(call inherit-product, vendor/google/build/opengapps-packages.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
