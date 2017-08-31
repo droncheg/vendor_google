@@ -73,6 +73,13 @@ PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
 endif
 
+# 4K prop for YouTube
+## Only for Satsuki and Maple
+ifneq ($(filter aosp_e68% aosp_g81%, $(TARGET_PRODUCT)),)
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.display-size=3840x2160
+endif
+
 # OpenGapps
 GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
