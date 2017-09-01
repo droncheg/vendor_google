@@ -27,7 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.rotation_locked=true
 
 # SELinux
-#BOARD_USE_ENFORCING_SELINUX := true
+BOARD_USE_ENFORCING_SELINUX := true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
