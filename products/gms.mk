@@ -59,6 +59,11 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mount.exfat
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # DRM
 PRODUCT_COPY_FILES +=  \
     $(VENDOR_SONYAOSP_PATH)/prebuilt/common/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
