@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# Exports
-
-. $ANDROID_BUILD_TOP/vendor/google/tools/colors
-
 export Changelog=Changelog.txt
 
 if [ -f $Changelog ];
@@ -14,7 +10,7 @@ fi
 touch $Changelog
 
 # Print something to build output
-echo ${bldppl}"Generating changelog..."${txtrst}
+echo "Generating changelog..."
 
 for i in $(seq 5);
 do
@@ -35,6 +31,9 @@ done
 
 sed -i 's/project/   */g' $Changelog
 
+# Copy Used by our build server
+cp $Changelog /mnt/users/*/build/target/product/*/system/etc/
+# end
 cp $Changelog $OUT/system/etc/
 cp $Changelog $OUT/
 rm $Changelog
