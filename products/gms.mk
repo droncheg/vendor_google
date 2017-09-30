@@ -61,18 +61,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Titania.ogg
 endif
 
-# bootanimation (240-320 DPI)
-ifneq ($(filter aosp_sgp521 aosp_sgp511_windy aosp_sgp621 aosp_sgp611_windy aosp_d5803 aosp_e23% aosp_e5823 aosp_d5503 aosp_c6833 aosp_sgp771 aosp_sgp712_windy aosp_f5321, $(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES +=  \
-    $(VENDOR_SONYAOSP_PATH)/prebuilt/common/bootanimation/720/bootanimation.zip:system/media/bootanimation.zip
-endif
-
-# bootanimation (480 DPI)
-ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e65% aosp_e66% aosp_e68% aosp_f512% aosp_f813% aosp_f833% aosp_g823% aosp_g814%, $(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES +=  \
-    $(VENDOR_SONYAOSP_PATH)/prebuilt/common/bootanimation/1080/bootanimation.zip:system/media/bootanimation.zip
-endif
-
 # 4K prop for YouTube
 ## Only for Satsuki and Maple
 ifneq ($(filter aosp_e68% aosp_g81%, $(TARGET_PRODUCT)),)
