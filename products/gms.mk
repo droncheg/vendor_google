@@ -107,12 +107,11 @@ endif
 PRODUCT_PACKAGES += \
     GoogleCamera \
     GoogleContacts \
+    GoogleExtServices \
+    GoogleExtShared \
+    GooglePrintRecommendationService \
     LatinImeGoogle \
-    Music2
-
-ifneq ($(filter-out aosp_c6903 aosp_c6833 aosp_d5503, $(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
+    Music2 \
     TagGoogle
-endif
 
 $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
