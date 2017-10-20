@@ -86,6 +86,9 @@ endif
 # To override stock AOSP apps
 PRODUCT_PACKAGES += \
     GoogleContacts \
+    GoogleExtServices \
+    GoogleExtShared \
+    GooglePrintRecommendationService \
     LatinImeGoogle \
     Music2
 
