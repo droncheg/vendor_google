@@ -36,6 +36,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Kernel-headers FLAG
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 
+# Recovery Header
+TARGET_CUSTOM_KERNEL_HEADERS := $(VENDOR_SONYAOSP_PATH)/recovery/include
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     $(VENDOR_SONYAOSP_PATH)/overlay/common
