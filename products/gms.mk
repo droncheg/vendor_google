@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mount.exfat
 
+# DRM
+PRODUCT_COPY_FILES +=  \
+    $(VENDOR_SONYAOSP_PATH)/prebuilt/common/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
+
 # Audio (Ringtones - Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
