@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
     PixelTheme \
     Stock
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.vendor.overlay.theme=com.google.android.theme.stock
+
 # DRM
 PRODUCT_COPY_FILES +=  \
     $(VENDOR_SONYAOSP_PATH)/prebuilt/common/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
