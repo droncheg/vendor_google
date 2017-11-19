@@ -15,6 +15,9 @@
 # vendor path
 VENDOR_SONYAOSP_PATH := vendor/google
 
+# Exclude SystemUI test packages
+EXCLUDE_SYSTEMUI_TESTS := true
+
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce \
